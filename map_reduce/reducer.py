@@ -1,4 +1,4 @@
-#!/use/bin/env python
+#!/usr/bin/env python
 import sys
 
 current_word =  None
@@ -7,7 +7,7 @@ word = None
 
 #take all the words from the mapper and count them
 
-#lines passes from the mapper.py program
+#lines passed from the mapper.py program
 for line in sys.stdin:
     line=line.strip()
 
@@ -29,3 +29,6 @@ for line in sys.stdin:
 
 if current_word == word:
     print(current_word + "\t" + str(current_count))
+
+#echo 'a quick brown fox jumps over a lazy dog'|./mapper.py|sort|./reducer.py
+#cat ../cats_txt.txt|./mapper.py|sort|./reducer.py
